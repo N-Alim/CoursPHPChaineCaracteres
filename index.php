@@ -3,6 +3,8 @@
 echo ord('F'); // Affiche code ASCII
 echo chr(101); // Affiche caractère depuis code ASCII
 */
+
+/*
 $version = 8;
 $langue = "fr";
 $url = "PHP %d est disponible sur l'adresse https://%s.php.net";
@@ -59,3 +61,8 @@ else
 {
     echo "@ ne manque pas";
 }
+*/
+
+$html = "<h1><a href='index.php'>Page index<a/></h1>";
+echo "Texte : " . $html . "<br />";
+echo "Texte : " . strip_tags($html, "<a>") . "<br />"; // 2ème paramètre: tags autorisés
