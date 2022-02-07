@@ -92,11 +92,20 @@ echo str_replace($cherche, $remplace, $texte);
 // Expressions rationnelles
 $texte = "J'ai adopté un chaton";
 
-if (preg_match("/chat/", $texte))
+if (preg_match("/un chat| un chien/", $texte))
 {
-    echo "La phrase contient le mot 'chat'";
+    echo "La phrase contient 'un chat' ou 'un chien'";
 }
 else
 {
-    echo "La phrase ne contien pas le mot 'chat'";
+    echo "La phrase ne contient pas le mot 'un chat' ni 'un chien'";
+}
+
+if (strpos($texte, "un chat") !== false || strpos($texte, "un chien") !== false)
+{
+    echo "Chien ou chat";
+}
+else
+{
+    echo "Ni chien ou chat";
 }
