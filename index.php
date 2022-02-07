@@ -62,7 +62,7 @@ else
     echo "@ ne manque pas";
 }
 */
-
+/*
 $html = "<h1><a href='index.php'>Page index<a/></h1>";
 echo "Texte : " . $html . "<br />";
 echo "Texte : " . strip_tags($html, "<a>") . "<br />"; // 2ème paramètre: tags autorisés
@@ -76,14 +76,27 @@ echo substr("toto@gmail.com", 4, 2); //Affiche @g
 echo "<br />";
 
 // Remplacer un motif par un autre
-/*
+
 $texte = "Je fais du PHP";
 $cherche = "PHP";
 $remplace = "code";
 echo str_replace($cherche, $remplace, $texte);
-*/
+
 
 $texte = "pomme, poire, kiwi, banane";
 $cherche = array("pomme", "poire", "kiwi", "banane");
 $remplace = "fruit";
 echo str_replace($cherche, $remplace, $texte);
+*/
+
+// Expressions rationnelles
+$texte = "J'ai adopté un chaton";
+
+if (preg_match("/chat/", $texte))
+{
+    echo "La phrase contient le mot 'chat'";
+}
+else
+{
+    echo "La phrase ne contien pas le mot 'chat'";
+}
