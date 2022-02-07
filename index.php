@@ -35,5 +35,16 @@ else
 echo "<hr />";
 
 // Affiche une chaîne depuis une entrée sous forme de tableau
-$infos = ["PHP", 8.1];
-vprintf("%s %d", $infos);
+$infos = ["PHP", round(8.1, 1)];
+vprintf("%s %.2f <br />", $infos);
+
+// Accès à un caractère précis
+$texte = "Je me prénomme Frédéric";
+echo $texte[0];
+echo "<br />";
+echo strlen($texte);
+echo "<br />";
+echo mb_strlen($texte);
+echo "<br />";
+echo str_word_count($texte); // Ne traite pas les accents
+
