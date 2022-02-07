@@ -111,7 +111,7 @@ else
     echo "Ni chien ou chat";
 }
 */
-
+/*
 $recherche = "/J'ai adopté un (chat|chien)/";
 
 echo preg_match($recherche, $texte); // Renvoie la valeur 1
@@ -121,3 +121,28 @@ $recherche2 = '/[012][0123456789]h[012345][0123456789]/';
 // $recherche2 = '/[^3-9][0-9]h[0-5][0-9]/'; est pareil
 
 echo preg_match($recherche2, $texte2);
+
+
+[[:lower:]] lettres miniscules
+[[:upper:]] lettres majuscules
+[[:alpha:]] caractères alphabétiques
+[[:digit:]] chiffres décimaux
+[[:xdigit:]] chiffres héxadécimaux
+[[:alnum:]] alphanumérique
+[[:ascii:]] ASCII 0 à 127
+[[:blank:]] espace ou tabulation
+
+[[:^alpha:]] caractères non alphabétiques
+
+
+\d chiffre décimal
+\w caractère constituant un mot
+\s espace
+*/
+
+$texte = "abcddddde";
+$recherche = "/abcd{3, 5}e/";  //Nombres d'occurences délimité de 3 à 5 occurences (!= fixe) 
+// $recherche = "/abcd*e/";  //Nombres d'occurences d de 0 à n fois 
+// $recherche = "/abcd+e/";  //Nombres d'occurences d de 1 à n fois 
+// $recherche = "/abcd?e/";  //Nombres d'occurences d de 0 à 1 fois 
+preg_match($recherche, $texte);
