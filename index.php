@@ -48,3 +48,14 @@ echo mb_strlen($texte);
 echo "<br />";
 echo str_word_count($texte); // Ne traite pas les accents
 
+$mail = "contact@raspberry.com";
+$position = strpos($mail, "@");
+if ($position === false)
+{
+    echo "Il manque @";
+}
+
+else
+{
+    echo "@ ne manque pas";
+}
