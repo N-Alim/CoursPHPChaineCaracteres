@@ -101,6 +101,7 @@ else
     echo "La phrase ne contient pas le mot 'un chat' ni 'un chien'";
 }
 
+/*
 if (strpos($texte, "un chat") !== false || strpos($texte, "un chien") !== false)
 {
     echo "Chien ou chat";
@@ -109,3 +110,14 @@ else
 {
     echo "Ni chien ou chat";
 }
+*/
+
+$recherche = "/J'ai adopté un (chat|chien)/";
+
+echo preg_match($recherche, $texte); // Renvoie la valeur 1
+
+$texte2 = "Les enfants sont rentrés à 12h45";
+$recherche2 = '/[012][0123456789]h[012345][0123456789]/';
+// $recherche2 = '/[^3-9][0-9]h[0-5][0-9]/'; est pareil
+
+echo preg_match($recherche2, $texte2);
