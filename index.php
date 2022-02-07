@@ -66,3 +66,24 @@ else
 $html = "<h1><a href='index.php'>Page index<a/></h1>";
 echo "Texte : " . $html . "<br />";
 echo "Texte : " . strip_tags($html, "<a>") . "<br />"; // 2ème paramètre: tags autorisés
+
+// Conventions d'affichage locales
+// setlocale(catégorie, localité);
+setlocale(LC_ALL, 'fr_FR', "fr", "FR", "fr_FR@euro");
+echo strstr("toto@gmail.com", '@'); //Affiche @gmail.com
+echo "<br />";
+echo substr("toto@gmail.com", 4, 2); //Affiche @g
+echo "<br />";
+
+// Remplacer un motif par un autre
+/*
+$texte = "Je fais du PHP";
+$cherche = "PHP";
+$remplace = "code";
+echo str_replace($cherche, $remplace, $texte);
+*/
+
+$texte = "pomme, poire, kiwi, banane";
+$cherche = array("pomme", "poire", "kiwi", "banane");
+$remplace = "fruit";
+echo str_replace($cherche, $remplace, $texte);
